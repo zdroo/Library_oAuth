@@ -1,0 +1,166 @@
+2023-07-12 18:26:13.282 +03:00 [ERR] GetBooksByIsbn
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'rentalprice'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetBooksByIsbn(String isbns)
+   at TestAPI2.Services.DataService.GetBooksByIsbns(IEnumerable`1 isbns)
+   at TestAPI2.Controllers.LibraryController.GetBooksByIsbn(List`1 isbns)
+ClientConnectionId:6d9a7f20-aad2-487c-813e-7467414a7c0a
+Error Number:207,State:1,Class:16
+2023-07-12 19:13:51.931 +03:00 [ERR] BorrowBooks
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@id".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at TestAPI2.Repositories.DataRepository.GetBookByIsbn(String isbn) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 26
+   at TestAPI2.Services.DataService.GetBookByIsbn(String isbn) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.BorrowBooks(String isbn) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 82
+ClientConnectionId:da3b6977-f033-4993-8e0b-950dc4be98ab
+Error Number:137,State:2,Class:15
+2023-07-12 19:14:06.412 +03:00 [ERR] GetBooksByIsbn
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@id".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at TestAPI2.Repositories.DataRepository.GetBookByIsbn(String isbn) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 26
+   at TestAPI2.Services.DataService.GetBookByIsbn(String isbn) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetBooksByIsbn(String isbn) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 53
+ClientConnectionId:da3b6977-f033-4993-8e0b-950dc4be98ab
+Error Number:137,State:2,Class:15
+2023-07-12 20:17:32.491 +03:00 [ERR] ReturnBook
+System.InvalidOperationException: The connection does not support MultipleActiveResultSets.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(Boolean async, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.ReturnLoan(LoanModel loan) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 78
+   at TestAPI2.Services.DataService.ReturnBook(Int32 userId) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 44
+   at TestAPI2.Controllers.LibraryController.ReturnBook() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 110
+2023-07-12 20:18:30.565 +03:00 [ERR] ReturnBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@id".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.ReturnLoan(LoanModel loan)
+   at TestAPI2.Services.DataService.ReturnBook(Int32 userId)
+   at TestAPI2.Controllers.LibraryController.ReturnBook()
+ClientConnectionId:f1e285a5-8171-4bb4-8dc1-38983b50fb16
+Error Number:137,State:2,Class:15
+2023-07-12 20:18:42.795 +03:00 [ERR] ReturnBook
+System.NotSupportedException: The member id of type System.Threading.Tasks.Task`1[[System.Collections.Generic.IEnumerable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] cannot be used as a parameter value
+   at Dapper.SqlMapper.LookupDbType(Type type, String name, Boolean demand, ITypeHandler& handler) in /_/Dapper/SqlMapper.cs:line 493
+   at Dapper.SqlMapper.CreateParamInfoGenerator(Identity identity, Boolean checkForDuplicates, Boolean removeUnused, IList`1 literals) in /_/Dapper/SqlMapper.cs:line 2619
+   at Dapper.SqlMapper.GetCacheInfo(Identity identity, Object exampleParameters, Boolean addToCache) in /_/Dapper/SqlMapper.cs:line 1818
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 641
+   at TestAPI2.Repositories.DataRepository.ReturnLoan(LoanModel loan)
+   at TestAPI2.Services.DataService.ReturnBook(Int32 userId)
+   at TestAPI2.Controllers.LibraryController.ReturnBook()
+2023-07-12 20:19:43.279 +03:00 [ERR] ReturnBook
+System.NotSupportedException: The member id of type System.Threading.Tasks.Task`1[[System.Collections.Generic.IEnumerable`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] cannot be used as a parameter value
+   at Dapper.SqlMapper.LookupDbType(Type type, String name, Boolean demand, ITypeHandler& handler) in /_/Dapper/SqlMapper.cs:line 493
+   at Dapper.SqlMapper.CreateParamInfoGenerator(Identity identity, Boolean checkForDuplicates, Boolean removeUnused, IList`1 literals) in /_/Dapper/SqlMapper.cs:line 2619
+   at Dapper.SqlMapper.GetCacheInfo(Identity identity, Object exampleParameters, Boolean addToCache) in /_/Dapper/SqlMapper.cs:line 1818
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 641
+   at TestAPI2.Repositories.DataRepository.ReturnLoan(LoanModel loan)
+   at TestAPI2.Services.DataService.ReturnBook(Int32 userId)
+   at TestAPI2.Controllers.LibraryController.ReturnBook()
+2023-07-12 20:20:01.958 +03:00 [ERR] ReturnBook
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the varchar value '055338256X' to data type int.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.ReturnLoan(LoanModel loan)
+   at TestAPI2.Services.DataService.ReturnBook(Int32 userId)
+   at TestAPI2.Controllers.LibraryController.ReturnBook()
+ClientConnectionId:f1e285a5-8171-4bb4-8dc1-38983b50fb16
+Error Number:245,State:1,Class:16
+2023-07-12 20:21:04.154 +03:00 [ERR] ReturnBook
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the varchar value '055338256X' to data type int.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.ReturnLoan(LoanModel loan)
+   at TestAPI2.Services.DataService.ReturnBook(Int32 userId)
+   at TestAPI2.Controllers.LibraryController.ReturnBook()
+ClientConnectionId:f1e285a5-8171-4bb4-8dc1-38983b50fb16
+Error Number:245,State:1,Class:16
+2023-07-12 20:37:07.800 +03:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@pricepertwoweeks".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookInsertModel book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 95
+   at TestAPI2.Services.DataService.InsertBook(BookInsertModel book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 57
+   at TestAPI2.Controllers.LibraryController.AddBook(BookInsertModel book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 129
+ClientConnectionId:8e72f10a-5ee6-4991-bbda-1be7683c23ba
+Error Number:137,State:2,Class:15
+2023-07-12 20:37:29.317 +03:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@pricepertwoweeks".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookInsertModel book)
+   at TestAPI2.Services.DataService.InsertBook(BookInsertModel book)
+   at TestAPI2.Controllers.LibraryController.AddBook(BookInsertModel book)
+ClientConnectionId:8e72f10a-5ee6-4991-bbda-1be7683c23ba
+Error Number:137,State:2,Class:15

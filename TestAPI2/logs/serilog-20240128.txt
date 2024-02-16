@@ -1,0 +1,488 @@
+2024-01-28 15:01:33.193 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 33
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 72
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-01-28 15:13:39.309 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 33
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 72
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-01-28 15:24:49.567 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.Users'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 34
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 72
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:5dfb5497-2859-4f79-bcea-e0edcafc57c9
+Error Number:208,State:1,Class:16
+2024-01-28 15:25:44.411 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.Users'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 34
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 72
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:5dfb5497-2859-4f79-bcea-e0edcafc57c9
+Error Number:208,State:1,Class:16
+2024-01-28 15:28:37.368 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.Users'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 34
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 72
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:5dfb5497-2859-4f79-bcea-e0edcafc57c9
+Error Number:208,State:1,Class:16
+2024-01-28 15:28:42.711 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.Users'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 34
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 72
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:5dfb5497-2859-4f79-bcea-e0edcafc57c9
+Error Number:208,State:1,Class:16
+2024-01-28 15:39:52.665 +02:00 [ERR] GetBooks
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.items'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 18
+   at TestAPI2.Services.DataService.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 18
+   at TestAPI2.Controllers.LibraryController.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 29
+ClientConnectionId:56d5ded7-e39b-4a10-bae7-bcdec2461a79
+Error Number:208,State:1,Class:16
+2024-01-28 15:39:58.151 +02:00 [ERR] GetBooks
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.items'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 18
+   at TestAPI2.Services.DataService.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 18
+   at TestAPI2.Controllers.LibraryController.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 29
+ClientConnectionId:56d5ded7-e39b-4a10-bae7-bcdec2461a79
+Error Number:208,State:1,Class:16
+2024-01-28 15:40:25.999 +02:00 [ERR] GetBooks
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.items'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 18
+   at TestAPI2.Services.DataService.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 18
+   at TestAPI2.Controllers.LibraryController.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 29
+ClientConnectionId:56d5ded7-e39b-4a10-bae7-bcdec2461a79
+Error Number:208,State:1,Class:16
+2024-01-28 15:41:10.370 +02:00 [ERR] GetBooks
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.items'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 18
+   at TestAPI2.Services.DataService.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 18
+   at TestAPI2.Controllers.LibraryController.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 29
+ClientConnectionId:56d5ded7-e39b-4a10-bae7-bcdec2461a79
+Error Number:208,State:1,Class:16
+2024-01-28 15:44:08.258 +02:00 [ERR] GetBooks
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 18
+   at TestAPI2.Services.DataService.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 18
+   at TestAPI2.Controllers.LibraryController.GetBooks() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 29
+ClientConnectionId:19925d7c-f999-4169-9f19-4cef3a5a33d0
+Error Number:208,State:1,Class:16
+2024-01-28 15:50:31.902 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:330e09bf-cbf7-4cda-9d35-134a769c5179
+Error Number:208,State:1,Class:16
+2024-01-28 15:51:33.788 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:99ae98a3-f8f0-4ee0-be2f-4cdfbd713138
+Error Number:208,State:1,Class:16
+2024-01-28 15:52:08.573 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:99ae98a3-f8f0-4ee0-be2f-4cdfbd713138
+Error Number:208,State:1,Class:16
+2024-01-28 15:52:28.575 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:99ae98a3-f8f0-4ee0-be2f-4cdfbd713138
+Error Number:208,State:1,Class:16
+2024-01-28 15:53:19.012 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:4da4fc4c-8c83-4acf-a12b-b0c2237bc8eb
+Error Number:208,State:1,Class:16
+2024-01-28 15:54:28.397 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:7a91a8b3-d129-490b-9655-288f23c9e115
+Error Number:208,State:1,Class:16
+2024-01-28 15:57:03.391 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:73917462-4439-4e87-8251-216c3e622eb0
+Error Number:208,State:1,Class:16
+2024-01-28 15:57:56.845 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:d922f2ba-b342-4dd0-a25b-532b5dcc447f
+Error Number:208,State:1,Class:16
+2024-01-28 15:58:26.818 +02:00 [ERR] GetAuthors
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'master.Library.Books'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at TestAPI2.Repositories.DataRepository.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 99
+   at TestAPI2.Services.DataService.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 23
+   at TestAPI2.Controllers.LibraryController.GetAuthors() in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 47
+ClientConnectionId:07341d0b-dd23-4dad-a93e-02860fe65af4
+Error Number:208,State:1,Class:16
+2024-01-28 16:02:33.613 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'id', table 'Library.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 34
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 77
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:415ea304-c2e2-4c32-898a-d59eb74b46a3
+Error Number:515,State:2,Class:16
+2024-01-28 16:03:24.730 +02:00 [ERR] Register
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'id', table 'Library.dbo.Users'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 34
+   at TestAPI2.Services.DataService.InsertUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 77
+   at TestAPI2.Controllers.AuthController.Register(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 46
+ClientConnectionId:415ea304-c2e2-4c32-898a-d59eb74b46a3
+Error Number:515,State:2,Class:16
+2024-01-28 16:05:58.456 +02:00 [ERR] Login
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'refreshtoken'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at TestAPI2.Repositories.DataRepository.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 43
+   at TestAPI2.Services.DataService.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 81
+   at TestAPI2.Controllers.AuthController.Login(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 67
+ClientConnectionId:415ea304-c2e2-4c32-898a-d59eb74b46a3
+Error Number:207,State:1,Class:16
+2024-01-28 16:06:20.548 +02:00 [ERR] Login
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'refreshtoken'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at TestAPI2.Repositories.DataRepository.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 43
+   at TestAPI2.Services.DataService.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 81
+   at TestAPI2.Controllers.AuthController.Login(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 67
+ClientConnectionId:415ea304-c2e2-4c32-898a-d59eb74b46a3
+Error Number:207,State:1,Class:16
+2024-01-28 16:10:34.826 +02:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.dbo.items'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 69
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 144
+ClientConnectionId:109f5b48-0b28-4292-93fb-4bab98ef70be
+Error Number:208,State:1,Class:16
+2024-01-28 16:10:59.452 +02:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.dbo.items'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 69
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 144
+ClientConnectionId:109f5b48-0b28-4292-93fb-4bab98ef70be
+Error Number:208,State:1,Class:16
+2024-01-28 16:11:13.741 +02:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Library.dbo.items'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 69
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 144
+ClientConnectionId:109f5b48-0b28-4292-93fb-4bab98ef70be
+Error Number:208,State:1,Class:16
+2024-01-28 16:12:16.533 +02:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'pricepertwoweeks'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 69
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 144
+ClientConnectionId:b67023cd-4b2d-4aa6-bfda-aba28e8a03d8
+Error Number:207,State:1,Class:16
+2024-01-28 16:13:38.579 +02:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@price".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 69
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 144
+ClientConnectionId:2e726bf2-e48d-400b-89e8-594033b00c69
+Error Number:137,State:2,Class:15
+2024-01-28 16:14:45.571 +02:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@price".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 69
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 144
+ClientConnectionId:2e726bf2-e48d-400b-89e8-594033b00c69
+Error Number:137,State:2,Class:15

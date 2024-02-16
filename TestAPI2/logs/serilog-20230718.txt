@@ -1,0 +1,44 @@
+2023-07-18 16:41:29.528 +03:00 [ERR] Login
+System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+ ---> System.ComponentModel.Win32Exception (121): The semaphore timeout period has expired.
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.UpdateUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 52
+   at TestAPI2.Services.DataService.UpdateUser(User user) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 78
+   at TestAPI2.Controllers.AuthController.Login(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 83
+ClientConnectionId:4fa6551f-c843-4f55-9216-8021b92659f9
+Error Number:121,State:0,Class:20
+2023-07-18 16:42:10.051 +03:00 [ERR] Login
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.)
+ ---> System.ComponentModel.Win32Exception (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at TestAPI2.Repositories.DataRepository.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 42
+   at TestAPI2.Services.DataService.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 74
+   at TestAPI2.Controllers.AuthController.Login(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 68
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10060,State:0,Class:20
+2023-07-18 16:43:22.146 +03:00 [ERR] Login
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.)
+ ---> System.ComponentModel.Win32Exception (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at TestAPI2.Repositories.DataRepository.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 42
+   at TestAPI2.Services.DataService.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 74
+   at TestAPI2.Controllers.AuthController.Login(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 68
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10060,State:0,Class:20

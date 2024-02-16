@@ -1,0 +1,64 @@
+2023-07-14 11:04:41.762 +03:00 [ERR] AddBook
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'TestAPI2.Models.BookModel'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 91
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 62
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 125
+2023-07-14 11:05:01.234 +03:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__items__3213E83FFF34025A'. Cannot insert duplicate key in object 'library.items'. The duplicate key value is (1312313231).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 62
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 125
+ClientConnectionId:5103f83e-37f8-4994-8f6d-10ad173d986b
+Error Number:2627,State:1,Class:14
+2023-07-14 11:05:18.110 +03:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__items__3213E83FFF34025A'. Cannot insert duplicate key in object 'library.items'. The duplicate key value is (1312313231).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 62
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 125
+ClientConnectionId:5103f83e-37f8-4994-8f6d-10ad173d986b
+Error Number:2627,State:1,Class:14
+2023-07-14 11:05:42.646 +03:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__items__3213E83FFF34025A'. Cannot insert duplicate key in object 'library.items'. The duplicate key value is (1312313231).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 90
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 62
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 125
+ClientConnectionId:5103f83e-37f8-4994-8f6d-10ad173d986b
+Error Number:2627,State:1,Class:14

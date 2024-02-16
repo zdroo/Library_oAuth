@@ -1,0 +1,162 @@
+2024-02-16 18:00:34.977 +02:00 [ERR] Login
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 473
+   at TestAPI2.Repositories.DataRepository.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 39
+   at TestAPI2.Services.DataService.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 81
+   at TestAPI2.Controllers.AuthController.Login(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 66
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-02-16 18:01:03.653 +02:00 [ERR] Login
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 473
+   at TestAPI2.Repositories.DataRepository.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 39
+   at TestAPI2.Services.DataService.GetUserByEmail(String email) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 81
+   at TestAPI2.Controllers.AuthController.Login(UserLoginModel userDto) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\AuthController.cs:line 66
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2024-02-16 18:16:11.347 +02:00 [ERR] BorrowBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'rentalid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at Library_oAuth.Repositories.DataRepository.GetUserActiveLoan(Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Repositories\DataRepository.cs:line 74
+   at Library_oAuth.Services.DataService.GetUserActiveLoan(Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Services\DataService.cs:line 73
+   at Library_oAuth.Controllers.LibraryController.BorrowBook(String isbn) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Controllers\LibraryController.cs:line 90
+ClientConnectionId:ad97e017-0bab-4e11-a0af-a2cd5ccd3862
+Error Number:207,State:1,Class:16
+2024-02-16 18:16:59.854 +02:00 [ERR] BorrowBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'rentalid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at Library_oAuth.Repositories.DataRepository.GetUserActiveLoan(Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Repositories\DataRepository.cs:line 74
+   at Library_oAuth.Services.DataService.GetUserActiveLoan(Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Services\DataService.cs:line 73
+   at Library_oAuth.Controllers.LibraryController.BorrowBook(String isbn) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Controllers\LibraryController.cs:line 90
+ClientConnectionId:ad97e017-0bab-4e11-a0af-a2cd5ccd3862
+Error Number:207,State:1,Class:16
+2024-02-16 18:18:01.732 +02:00 [ERR] BorrowBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'rentalid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at Library_oAuth.Repositories.DataRepository.GetUserActiveLoan(Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Repositories\DataRepository.cs:line 74
+   at Library_oAuth.Services.DataService.GetUserActiveLoan(Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Services\DataService.cs:line 73
+   at Library_oAuth.Controllers.LibraryController.BorrowBook(String isbn) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Controllers\LibraryController.cs:line 90
+ClientConnectionId:ad97e017-0bab-4e11-a0af-a2cd5ccd3862
+Error Number:207,State:1,Class:16
+2024-02-16 18:20:13.648 +02:00 [ERR] BorrowBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@price".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at Library_oAuth.Repositories.DataRepository.BorrowBook(BookLoanModel bookLoan) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Repositories\DataRepository.cs:line 55
+   at Library_oAuth.Services.DataService.BorrowBook(String isbn, Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Services\DataService.cs:line 55
+   at Library_oAuth.Controllers.LibraryController.BorrowBook(String isbn) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Controllers\LibraryController.cs:line 97
+ClientConnectionId:cfa0c49f-2cd9-40b0-ad55-88deeb68ef41
+Error Number:137,State:2,Class:15
+2024-02-16 18:23:26.648 +02:00 [ERR] BorrowBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@price".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at Library_oAuth.Repositories.DataRepository.BorrowBook(BookLoanModel bookLoan) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Repositories\DataRepository.cs:line 55
+   at Library_oAuth.Services.DataService.BorrowBook(String isbn, Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Services\DataService.cs:line 55
+   at Library_oAuth.Controllers.LibraryController.BorrowBook(String isbn) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Controllers\LibraryController.cs:line 97
+ClientConnectionId:15724609-2aff-421b-8aed-0461c75a5fc5
+Error Number:137,State:2,Class:15
+2024-02-16 18:24:01.516 +02:00 [ERR] BorrowBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@price".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at Library_oAuth.Repositories.DataRepository.BorrowBook(BookLoanModel bookLoan) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Repositories\DataRepository.cs:line 55
+   at Library_oAuth.Services.DataService.BorrowBook(String isbn, Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Services\DataService.cs:line 55
+   at Library_oAuth.Controllers.LibraryController.BorrowBook(String isbn) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Controllers\LibraryController.cs:line 97
+ClientConnectionId:15724609-2aff-421b-8aed-0461c75a5fc5
+Error Number:137,State:2,Class:15
+2024-02-16 18:26:10.806 +02:00 [ERR] ReturnBook
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'rentalid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at Library_oAuth.Repositories.DataRepository.ReturnBook(BookLoanModel loan) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Repositories\DataRepository.cs:line 63
+   at Library_oAuth.Services.DataService.ReturnBook(Int32 userId) in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Services\DataService.cs:line 62
+   at Library_oAuth.Controllers.LibraryController.ReturnBook() in C:\Visual Studio Working Environment\Githubwork\Library_oAuth\TestAPI2\Controllers\LibraryController.cs:line 121
+ClientConnectionId:098f2037-7d6f-4526-94c3-e4cd87db5e55
+Error Number:207,State:1,Class:16
+2024-02-16 18:32:32.361 +02:00 [ERR] ReturnBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@rentalid".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at Library_oAuth.Repositories.DataRepository.ReturnBook(BookLoanModel loan)
+   at Library_oAuth.Services.DataService.ReturnBook(Int32 userId)
+   at Library_oAuth.Controllers.LibraryController.ReturnBook()
+ClientConnectionId:9e3bc706-8b17-4ece-a655-36f76a6f4e3b
+Error Number:137,State:2,Class:15

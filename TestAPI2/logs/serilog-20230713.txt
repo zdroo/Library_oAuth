@@ -1,0 +1,53 @@
+2023-07-13 17:36:23.078 +03:00 [ERR] BorrowBook
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@userid".
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at TestAPI2.Repositories.DataRepository.BorrowBook(BookLoanModel bookLoan) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 70
+   at TestAPI2.Services.DataService.BorrowBook(BookModel book, Int32 userId) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 35
+   at TestAPI2.Controllers.LibraryController.BorrowBook(String isbn) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 82
+ClientConnectionId:d1abc9d8-bdf3-49bc-9225-1c0df10a3ab8
+Error Number:137,State:2,Class:15
+2023-07-13 22:08:00.254 +03:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Arithmetic overflow error converting numeric to data type numeric.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Repositories\DataRepository.cs:line 98
+   at TestAPI2.Services.DataService.InsertBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Services\DataService.cs:line 62
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book) in C:\Visual Studio Working Environment\TestAPI2\TestAPI2\Controllers\LibraryController.cs:line 121
+ClientConnectionId:99149232-9796-45ca-92f6-c421ce66bc65
+Error Number:8115,State:8,Class:16
+2023-07-13 22:09:12.439 +03:00 [ERR] AddBook
+System.Data.SqlClient.SqlException (0x80131904): Arithmetic overflow error converting numeric to data type numeric.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQuery(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 647
+   at TestAPI2.Repositories.DataRepository.InsertBook(BookDto book)
+   at TestAPI2.Services.DataService.InsertBook(BookDto book)
+   at TestAPI2.Controllers.LibraryController.AddBook(BookDto book)
+ClientConnectionId:99149232-9796-45ca-92f6-c421ce66bc65
+Error Number:8115,State:8,Class:16
